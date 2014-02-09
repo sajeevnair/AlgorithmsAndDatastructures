@@ -10,3 +10,14 @@ void printArray(int * a, int sizeOfArray){
 
 
 }
+
+
+int max(int x, int y){
+	return (x > y) ? x : y;
+}
+
+void swap(int& x, int& y){
+	x = x^y;
+	y = x^y;
+	x = x^y;
+}
