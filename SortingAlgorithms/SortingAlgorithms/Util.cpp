@@ -7,7 +7,7 @@ void printArray(int * a, int sizeOfArray){
 		cout << a[i] << "\t";
 
 	}
-	cout << endl;
+	cout << "\n";
 }
 
 void printArray(char * a, int sizeOfArray){
@@ -16,7 +16,7 @@ void printArray(char * a, int sizeOfArray){
 		cout << a[i] << "\t";
 
 	}
-	cout << endl;
+	cout << "\n";
 }
 
 

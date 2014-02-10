@@ -1,20 +1,41 @@
 #include "Header.h"
 // the driver
 int main(){
-	//test code
-	int arr[] = { 4, 2, 5, 9, 1 };
-	int size = sizeof(arr) / sizeof(int);
-	printArray(arr, size );
-	swap(arr[0], arr[1]);
-	printArray(arr, size);
+	//declarations
+	int size = 0;
+	int* myArray;
+	
+	//Opens for reading the file
+	ifstream myFile("example.txt");
 
-	char arr2[]= {'a','v','g'};
-	printArray(arr2, 3);
-	swap(arr2[0], arr2[1]);
-	printArray(arr2, 3);
+	//while the file has not ended
+	while (!myFile.eof())
+	{
+		// first get the size
+		myFile >> size;
+		cout << size << endl;
+		//dynamically allocate the array of size
+		myArray = new int[size];
 
-	//for vs ide
-	getchar();
+		// fill the array
+		for (int i = 0; i < size; i++)
+		{
+			myFile >> myArray[i];
+		}
+
+		// do something with the array
+		printArray(myArray, size);
+
+		// delete the array allocation
+		delete[] myArray;
+	}
+	 
+	//  close file
+	myFile.close();
+	
+	//for vs ide wait for user 
+	cin.get();
+
 	return 0;
 
 }
