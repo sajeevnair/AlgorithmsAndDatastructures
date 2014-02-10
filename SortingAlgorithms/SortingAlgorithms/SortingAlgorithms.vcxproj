@@ -64,6 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MergeSort.cpp" />
     <ClCompile Include="Util.cpp" />

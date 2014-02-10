@@ -25,6 +25,9 @@ int main(){
 
 		// do something with the array
 		printArray(myArray, size);
+		bubbleSort(myArray, size);
+		printArray(myArray, size);
+
 
 		// delete the array allocation
 		delete[] myArray;
