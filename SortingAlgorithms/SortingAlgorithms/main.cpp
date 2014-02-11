@@ -22,12 +22,21 @@ int main(){
 		{
 			myFile >> myArray[i];
 		}
+		printArray(myArray, size);
+
 
 		// do something with the array
-		printArray(myArray, size);
-		bubbleSort(myArray, size);
-		printArray(myArray, size);
+		clock_t begin = clock();
+		for (int i = 0; i < REPEAT; i++)
+		{
+			bubbleSort(myArray, size);
 
+		}
+		clock_t end = clock();
+		double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+
+		printArray(myArray, size);
+		cout << "Time to sort: " << elapsed_secs/REPEAT << endl;
 
 		// delete the array allocation
 		delete[] myArray;

@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <ctime>
+#define REPEAT 10000000
 
 using namespace::std;
 
